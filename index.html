@@ -80,6 +80,10 @@
     // Classifiy again!
     classifyVideo();
 
+    function windowResized() {
+    let cnv = resizeCanvas(windowWidth/3, windowHeight/3);
+    cnv.center();
+
     let magma = 0;
     let falcons = 0;
     let tigers = 0;
