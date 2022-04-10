@@ -18,7 +18,7 @@
   let classifier;
   // Model URL
   let imageModelURL = 'https://teachablemachine.withgoogle.com/models/plPAUug7V/';
-  
+
   // Video
   let video;
   let flippedVideo;
@@ -74,7 +74,66 @@
     label = results[0].label;
     // Classifiy again!
     classifyVideo();
+
+    let magma = 0;
+    let falcons = 0;
+    let tigers = 0;
+    let eagles = 0;
+    let lions = 0;
+    let dulo = 0;
+    let phoenix = 0;
+    let tangra = 0;
+
+    switch (label) {
+  case "Magma":
+    ++magma;
+    document.getElementById("magma").innerHTML = magma;
+    break;
+  case "Golden Lions":
+    ++lions;
+    document.getElementById("magma").innerHTML = magma;
+    break;
+  case "Falcons":
+    ++falcons;
+    document.getElementById("magma").innerHTML = magma;
+    break;
+  case "Flaming Tigers":
+    ++tigers;
+    document.getElementById("magma").innerHTML = magma;
+    break;
+  case "Dulo":
+    ++dulo;
+    document.getElementById("magma").innerHTML = magma;
+    break;
+  case "Phoenix":
+    ++phoenix;
+    document.getElementById("magma").innerHTML = magma;
+    break;
+  case "Black Eagles":
+    ++eagles;
+    document.getElementById("magma").innerHTML = magma;
+    break;
+  case "Tangra":
+    ++tangra;
+    document.getElementById("magma").innerHTML = magma;
+}
+
   }
 </script>
+
+<table>
+  <tr>
+    <th>Block</th>
+    <th>Points</th>
+  </tr>
+  <tr>
+    <td>Black Eagles</td>
+    <td>eagles</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Francisco Chang</td>
+  </tr>
+</table>
   </body>
 </html>
