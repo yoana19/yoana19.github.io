@@ -1,183 +1,209 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Point System</title>
-  </head>
-  <body>
-  <div style="position: absolute;
-              top: 50%;
-              transform: translate(0, -50%);
-              border: 5px solid #FFFF00;
-              padding: 10px;">
+<!doctype html>
+<html>
+    <head>
+        <title>Yoana Stankova</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    </head>
+    <body>
+        <!-- Navbar (sit on top) -->
+        <div class="w3-top">
+            <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+                <a href="#home" class="w3-bar-item w3-button"
+                    ><b>Yoana Stankova</b> Biomedical Engineering Student</a
+                >
+                <!-- Float links to the right. Hide them on small screens -->
+                <div class="w3-right w3-hide-small">
+                    <a href="#about" class="w3-bar-item w3-button">About Me</a>
+                    <a href="#projects" class="w3-bar-item w3-button">Projects</a>
+                    <!--<a href="#contact" class="w3-bar-item w3-button">Contact</a>-->
+                </div>
+            </div>
+        </div>
 
-    <h1>Block Point System</h1>
+        <!-- Header -->
+        <header class="w3-display-container w3-content w3-center" style="max-width:1500px">
+          <img class="w3-image" src="img/image.jpg" alt="Prosthetic Arm" width="1500" height="300">
+          <div class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center">
+            <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">PORTFOLIO</h1>
+            <h5 class="w3-hide-large" style="white-space:nowrap">PORTFOLIO</h5>
+            <h3 class="w3-hide-medium w3-hide-small">YOANA STANKOVA</h3>
+          </div>
+        </header>
 
-    <div>Point your camera at the students.</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
-<script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
-<script type="text/javascript">
-  // Classifier Variable
-  let classifier;
-  // Model URL
-  let imageModelURL = 'https://teachablemachine.withgoogle.com/models/plPAUug7V/';
+        <!-- Page content -->
+        <div class="w3-content w3-padding" style="max-width: 1564px">
+            <!-- About Section -->
+            <div class="w3-container w3-padding-32" id="about">
+                <h2 class="line-title">
+                    About Me
+                </h2>
+                <p style = "'Roboto', sans-serif;">
+                    Hello and welcome!</br> I'm a Biomedical Engineering student at
+                    the University of Groningen, deeply involved in innovative
+                    healthcare solutions and sustainable technologies. My
+                    experiences, ranging from a technical internship that
+                    sharpened my data analysis and research skills to leadership
+                    roles in sustainability and digital society initiatives,
+                    directly inform the projects you will see here. </br>This
+                    portfolio highlights my journey through engineering, where I
+                    apply complex problem-solving and creative strategies to
+                    real-world challenges. Explore my work to see how I
+                    integrate technical proficiency with impactful communication
+                    to advance the field of biomedical engineering. Whether
+                    you're a potential collaborator, a fellow enthusiast, or a
+                    recruiter, I'm excited to share my passion and projects with
+                    you.
+                </p>
+            </div>
 
-  // Video
-  let video;
-  let flippedVideo;
-  // To store the classification
-  let label = "";
+                <!--<div class="w3-container w3-padding-32" id="projects">
+                    <h3
+                        class="w3-border-bottom w3-border-light-grey w3-padding-16"
+                    >
+                        Software and Development Projects
+                    </h3>
+                </div>-->
+            </div>
 
-  // Load the model first
-  function preload() {
-    classifier = ml5.imageClassifier(imageModelURL + 'model.json');
-  }
+            <!--Project Section-->
+            <section class="game-section" id="projects">
+              <h2 class="line-title">Engineering and Design Projects</h2>
+              <div class="owl-carousel custom-carousel owl-theme">
+                <div class="item active" style="background-image: url('img/dnamodel.jpg')">
+                  <div class="item-desc">
+                    <h3>DNA Model</h3>
+                    <p>I created this interactive DNA model for a biology class in high school. Later selected by the teacher
+                         to demonstrate to other students how the DNA nucleobases work and pair up with each other.</p>
+                  </div>
+                </div>
+                <div class="item" style="background-image: url('img/petcare-1.jpg');">
+                  <div class="item-desc">
+                    <h3>Pet Care System</h3>
+                    <p>This intelligent pet care system, me and the team named
+                    Alfred, provides an easy solution to pet care when the
+                    owner is away. It is based on a Raspberry Pi and an
+                    Arduino board.
+                    <br />
+                    Alfred got us a 2nd place in the Ocado Technology
+                    Hackathon in Sofia in 2019.</p>
+                  </div>
+                </div>
+                <div class="item" style="background-image: url('img/chess.jpg');">
+                  <div class="item-desc">
+                    <h3>Accessible Chess</h3>
+                    <p>Me and a fellow classmate worked on an
+                    <b>inclusive</b> chess board, that is easy to interact
+                    with and provides comfort to blind people or individuals
+                    with other visual impairment in the game of chess.</p>
+                  </div>
+                </div>
+                <div class="item" style="background-image: url('img/smartmirror.jpg')">
+                  <div class="item-desc">
+                    <h3>Inclusive Mirror</h3>
+                    <p>In an intensive 48-hour marathon, our team developed an
+                    intelligent mirror able to help people with
+                    <b>visual agnosia</b> easily get through a daily challenge.
+                    <br />
+                    This project ranked us at the 3rd place at the Sofia
+                    University St.Kliment Ohridski Inventive Marathon, 2019.</p>
+                  </div>
+                </div>
+                <div class="item" style="background-image: url('img/hipimplant.jpg');">
+                  <div class="item-desc">
+                    <h3>Smart Hip Implant</h3>
+                    <p>Along with fellow colleagues, we developed and carried
+                    out a final prototype, finite element analysis (FEM),
+                    cost estimation, and manufacturating details of a hip implant. We focused on a smart
+                    implant, able to interact with its environment
+                    which could also be used as a drug-delivery system in
+                    this way. <br />
+                    The implant was developed for a Medical Device Design
+                    course in 2022-2023.</p>
+                  </div>
+                </div>
+                <div class="item" style="background-image: url('img/working.jpg');">
+                  <div class="item-desc">
+                    <h3>Current Project</h3>
+                    <p>Due to the nature of the project, it cannot yet be
+                    listed here. Stay tuned!</p>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </section>
+            <!-- Contact Section -->
+            <!--<div class="w3-container w3-padding-32" id="contact">
+                <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">
+                    Contact
+                </h3>
+                <p>Lets get in touch and talk about your next project.</p>
+                <form name="contact" method="POST" data-netlify="true">
+                    <input
+                        class="w3-input w3-border"
+                        type="text"
+                        placeholder="Name"
+                        required
+                        name="Name"
+                    />
+                    <input
+                        class="w3-input w3-section w3-border"
+                        type="text"
+                        placeholder="Email"
+                        required
+                        name="Email"
+                    />
+                    <input
+                        class="w3-input w3-section w3-border"
+                        type="text"
+                        placeholder="Subject"
+                        required
+                        name="Subject"
+                    />
+                    <input
+                        class="w3-input w3-section w3-border"
+                        type="text"
+                        placeholder="Comment"
+                        required
+                        name="Comment"
+                    />
+                    <button class="w3-button w3-black w3-section" type="submit">
+                        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                    </button>
+                </form>
+            </div>-->
 
-  function setup() {
-    createCanvas(320, 260);
-    // Create the video
-    video = createCapture(VIDEO);
-    video.size(320, 240);
-    video.hide();
+        <!-- Footer -->
+        <footer class="w3-center w3-black w3-padding-16">
+            <p>
+                Visit my LinkedIn
+                <a
+                    href="https://www.linkedin.com/in/yoana-stankova/"
+                    title="LinkedIn"
+                    target="_blank"
+                    class="w3-hover-text-green"
+                    >Here</a
+                >
+            </p>
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <script>
+        $(".custom-carousel").owlCarousel({
+          autoWidth: true,
+          loop: true
+        });
+        $(document).ready(function () {
+          $(".custom-carousel .item").click(function () {
+            $(".custom-carousel .item").not($(this)).removeClass("active");
+            $(this).toggleClass("active");
+          });
+        });
+        </script>
 
-    flippedVideo = ml5.flipImage(video);
-    // Start classifying
-    classifyVideo();
-  }
-
-  function draw() {
-    background(0);
-    // Draw the video
-    image(flippedVideo, 0, 0);
-
-    // Draw the label
-    fill(255);
-    textSize(16);
-    textAlign(CENTER);
-    text(label, width / 2, height - 4);
-  }
-
-  // Get a prediction for the current video frame
-  function classifyVideo() {
-    flippedVideo = ml5.flipImage(video)
-    classifier.classify(flippedVideo, gotResult);
-    flippedVideo.remove();
-
-  }
-
-  // When we get a result
-  function gotResult(error, results) {
-    // If there is an error
-    if (error) {
-      console.error(error);
-      return;
-    }
-    // The results are in an array ordered by confidence.
-    // console.log(results[0]);
-    label = results[0].label;
-    // Classifiy again!
-    classifyVideo();
-
-    function windowResized() {
-    let cnv = resizeCanvas(windowWidth/3, windowHeight/3);
-    cnv.center();
-  }
-
-    let magma = 0;
-    let falcons = 0;
-    let tigers = 0;
-    let eagles = 0;
-    let lions = 0;
-    let dulo = 0;
-    let phoenix = 0;
-    let tangra = 0;
-
-    switch (label) {
-  case "Magma":
-    ++magma;
-    break;
-  case "Golden Lions":
-    ++lions;
-
-    break;
-  case "Falcons":
-    ++falcons;
-
-    break;
-  case "Flaming Tigers":
-    ++tigers;
-
-    break;
-  case "Dulo":
-    ++dulo;
-
-    break;
-  case "Phoenix":
-    ++phoenix;
-
-    break;
-  case "Black Eagles":
-    ++eagles;
-
-    break;
-  case "Tangra":
-    ++tangra;
-
-}
-
-document.getElementById("magma").innerHTML = " " + magma;
-document.getElementById("lions").innerHTML = lions;
-document.getElementById("falcons").innerHTML = falcons;
-document.getElementById("tigers").innerHTML = tigers;
-document.getElementById("dulo").innerHTML = dulo;
-document.getElementById("phoenix").innerHTML = phoenix;
-document.getElementById("eagles").innerHTML = eagles;
-document.getElementById("tangra").innerHTML = tangra;
-  }
-</script>
-
-<table>
-  <tr>
-    <th>Block</th>
-    <th>Points</th>
-  </tr>
-  <tr>
-    <td>Black Eagles</td>
-    <td id="eagles">          </td>
-  </tr>
-  <tr>
-    <td>Falcons</td>
-    <td id="falcons">          </td>
-  </tr>
-  <tr>
-    <td>Golden Lions</td>
-    <td id="lions">          </td>
-  </tr>
-  <tr>
-    <td>Magma</td>
-    <td id="magma">          </td>
-  </tr>
-  <tr>
-    <td>Tangra</td>
-    <td id="tangra">          </td>
-  </tr>
-  <tr>
-    <td>Flaming Tigers</td>
-    <td id="tigers">          </td>
-  </tr>
-  <tr>
-    <td>Dulo</td>
-    <td id="dulo">          </td>
-  </tr>
-  <tr>
-    <td>Phoenix</td>
-    <td id="phoenix">          </td>
-  </tr>
-</table>
-
-  </div>
-  </body>
+    </body>
 </html>
